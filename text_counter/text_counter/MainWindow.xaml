@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel>
+            <TextBlock>hello</TextBlock>
+            <TextBox Text="{Binding InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock>文字数：</TextBlock>
+            <TextBlock Text="{Binding CharCount}" />
+            <TextBlock>単語数：</TextBlock>
+            <TextBlock>行数：</TextBlock>
+        </StackPanel>
     </Grid>
 </Window>
