@@ -1,0 +1,1 @@
+dotnet build text_counter/text_counter.slnx  && dotnet run --project text_counter/text_counter
