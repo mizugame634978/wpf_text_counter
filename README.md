@@ -1,5 +1,6 @@
 c#, wpfの基礎を学ぶための学習用プロジェクト。AIが作成した`仕様書.md`を元に実装する
-build and run
+
+# build and run
 
 この階層で行う場合
 ```shell
