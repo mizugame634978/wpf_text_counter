@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Security.Cryptography;
 
 namespace text_counter.ViewModels;
 
@@ -22,6 +21,8 @@ public class MainViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(InputText));// UIに通知
 
             CharCount = _inputtext.Length;
+            WordCount = value.Split(new[] {' ','\n'}).Length;
+            LineCount = value.Split('\n',StringSplitOptions.RemoveEmptyEntries).Length;
 
         }
     }
@@ -30,10 +31,32 @@ public class MainViewModel : INotifyPropertyChanged
     public int CharCount
     {
         get => _charcount;
-        set {
+        set
+        {
             _charcount = value;
             OnPropertyChanged(nameof(CharCount));
         }
     }
     
+    private int _wordcount=0;
+    public int WordCount
+    {
+        get => _wordcount;
+        set
+        {
+            _wordcount = value;
+            OnPropertyChanged(nameof(WordCount));
+        }
+    }
+    
+    private int _linecount=0;
+    public int LineCount
+    {
+        get => _linecount;
+        set
+        {
+            _linecount = value;
+            OnPropertyChanged((nameof(LineCount)));
+        }
+    }
 }

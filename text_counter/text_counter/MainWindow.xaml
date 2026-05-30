@@ -9,11 +9,21 @@
     <Grid>
         <StackPanel>
             <TextBlock>hello</TextBlock>
-            <TextBox Text="{Binding InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <!-- <TextBox Text="{Binding InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" /> -->
+            <TextBox
+                AcceptsReturn="True"
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto"
+                Height="100"
+                Width="300"
+                Text="{Binding InputText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
             <TextBlock>文字数：</TextBlock>
             <TextBlock Text="{Binding CharCount}" />
             <TextBlock>単語数：</TextBlock>
+            <TextBlock Text="{Binding WordCount}" />
             <TextBlock>行数：</TextBlock>
+            <TextBlock Text="{Binding LineCount}" />
         </StackPanel>
     </Grid>
 </Window>
